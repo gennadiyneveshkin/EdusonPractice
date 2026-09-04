@@ -9,18 +9,18 @@
 # этой группой. Общую цену билетов стоит выводить в
 # формате с двумя знаками после запятой.
 
-n = input ('Введите количество посетителей')
+n = input('Введите количество посетителей: ')
 arr = []
-for i in range (n):
-    age = input (f'Введите возраст {i} посетителя')
+for i in range(int(n)):
+    age = int(input(f'Введите возраст {i + 1}-го посетителя: '))
     arr.append(age)
 total_price = 0
 for el in (arr):
-    if el <=2 or el >= 65:
+    if el <= 2 or el >= 65:
         price = 0
-    elif 12 <= el <= 3:
+    elif 3 <= el <= 12:
         price = 200
     else:
-        prise = 500
+        price = 500
     total_price += price
 print(total_price)
